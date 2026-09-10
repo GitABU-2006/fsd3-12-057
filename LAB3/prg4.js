@@ -4,12 +4,25 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { "content-type": "application/json" });
   console.log("Client URL:", req.url);
 
-  const product = {
+  const product = [{
     name: "iphone",
     price: 85000,
     qty: 2,
     discount: 10,
-  };
+  },
+  {
+    name:"laptop",
+    price: 120000,
+    qty: 1,
+    discount: 15,
+  },
+  {
+    name:"watch",
+    price: 15000,
+    qty: 3,
+    discount: 5,
+  }
+];
 
   res.end(JSON.stringify(product));
 });
