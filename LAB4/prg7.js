@@ -1,15 +1,19 @@
 import http from "http";
-
+import { getAllUsers } from "./users.js";
 const server = http.createServer((req, res) => {
-  if ((req.url === "/api/users" , req.method=="GET")){
+  if ((req.url === "/api/users" && req.method=="GET")){
      res.end(JSON.stringify({msg: "add user"}));
-} else if (req.url === "/api/users" , req.method=="POST") {
+} 
+else if (req.url === "/api/users" && req.method=="POST") {
     res.end(JSON.stringify({msg: "add user"}));
-  } else if (req.url === "/api/users" , req.method=="GET") {
+  } 
+  else if (req.url === "/api/users" && req.method=="GET") {
     res.end(JSON.stringify({msg: "single user with id 1"}));
-  } else if(req.url === "/api/users" , req.method=="PUT") {
+  } 
+  else if(req.url === "/api/users" && req.method=="PUT") {
     res.end(JSON.stringify({msg: "update user with id 1"}));
-  } else if(req.url === "/api/users" , req.method=="DELETE") {
+  }
+   else if(req.url === "/api/users" && req.method=="DELETE") {
     res.end(JSON.stringify({msg: "delete user with id 1"}));
   }
   else{
@@ -18,4 +22,4 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(3000, () => console.log("prg7 is running..."));
+server.listen(3001, () => console.log("prg7 is running..."));
