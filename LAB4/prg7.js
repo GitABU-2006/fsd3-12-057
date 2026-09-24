@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
 
       const user = JSON.parse(body);
 
-      const userCreated = addUser(user);
+      const userCreated = addusers(user);
 
       res.end(JSON.stringify({
         msg: "user added",
