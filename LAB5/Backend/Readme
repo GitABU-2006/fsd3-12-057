@@ -1,0 +1,40 @@
+# Express
+1. Create project folder (LAB5)
+2. Create two folder (frontend , backend) in root(LAB5)
+3. open terminal and reah to backend by 
+    ```
+        cd..
+        cd LAB5
+        cd Backend 
+        ```
+4. type `npm init -y`
+5. install nodemon `npm i nodemon -D`
+6. install express `npm i express`
+7. update backend/package.json
+    - change type `type:"module`
+    - change script
+    ```
+    "scripts": {
+    "start":"node app.js" , 
+    "dev":"nodemon prg1.js"
+  }
+  ```
+8. add `LAB5/backend/node_modules` to .gitignore
+9. create `prh1.js` in Backend
+10. write the sript below to start express server
+
+    ```
+    import express from 'express' 
+
+const app = express();
+
+app.get("/" , ( req, res) => {
+    res.send("Hello Express") ; 
+}) ;
+
+
+// this line must be last line ✅
+app.listen(4444 , () => console.log('prg1 i runnit at 4444')) ;
+
+    ```
+
