@@ -38,3 +38,7 @@ app.listen(4444 , () => console.log('prg1 i runnit at 4444')) ;
 
     ```
 
+# Static import 
+- in express we can add any static html pages 
+
+- express supports middle ware , when we have to execute sum functions before server execution then we use middleware `app.use` always apply insert any middleware 
